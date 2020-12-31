@@ -4,6 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+
              x:Class="MythicalCreatures.Views.ItemsPage"
              Title="{Binding Title}"
              x:Name="BrowseItemsPage">
@@ -51,6 +53,17 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <controls:MTAdView x:Name="myAds" IsVisible="true" PersonalizedAds="true" AdsId="ca-app-pub-2000687856046168/1623390829" VerticalOptions="EndAndExpand" >
+            <controls:MTAdView.HeightRequest>
+                <x:OnIdiom>
+                    <x:OnIdiom.Phone>50</x:OnIdiom.Phone>
+                    <x:OnIdiom.Tablet>90</x:OnIdiom.Tablet>
+                    <x:OnIdiom.Desktop>90</x:OnIdiom.Desktop>
+                </x:OnIdiom>
+            </controls:MTAdView.HeightRequest>
+        </controls:MTAdView>
+        <!--<Button Text="Load Reward" Clicked="LoadReward_OnClicked"/>-->
+        <Button CornerRadius="15" Text="Songs Update" Clicked="ShowReward_OnClicked"/>
     </StackLayout>
 
 </ContentPage>
